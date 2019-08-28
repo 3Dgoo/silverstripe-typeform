@@ -1,0 +1,6 @@
+---
+Name: typeform
+---
+SilverStripe\SiteConfig\SiteConfig:
+  extensions:
+    - DNADesign\Typeform\Extensions\TypeformSiteConfigExtension

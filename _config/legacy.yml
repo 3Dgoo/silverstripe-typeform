@@ -1,0 +1,9 @@
+---
+Name: eventslegacy
+---
+SilverStripe\ORM\DatabaseAdmin:
+  classname_value_remapping:
+    TypeformQuestion: DNADesign\Typeform\Model\TypeformQuestion
+    TypeformSubmission: DNADesign\Typeform\Model\TypeformSubmission
+    TypeformSubmission_Answer: DNADesign\Typeform\Model\TypeformSubmissionAnswer
+    TypeformSubmission_Deleted: DNADesign\Typeform\Model\TypeformSubmissionDeleted

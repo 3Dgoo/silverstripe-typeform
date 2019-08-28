@@ -7,42 +7,39 @@
 
 ## Requirements
 
-* SilverStripe 3.1
+* SilverStripe 4.4
 
 ## Documentation
 
-This module provides integration with Typeform.com and SilverStripe in a way 
+This module provides integration with Typeform.com and SilverStripe in a way
 that SilverStripe `Page` objects can have a linked Typeform Form and submissions
 made through Typeform are brought into SilverStripe to be managed through a
 `ModelAdmin` interface.
 
 ## Installation
 
-	composer require "dnadesign/silverstripe-typeform"
+    composer require "dnadesign/silverstripe-typeform"
 
 ## Usage
 
-Add the `TypeformExtension` extension to your formable page type. For 
-example, in mysite/_config/extensions.yml
+Add the `TypeformExtension` extension to your formable page type. For
+example, in `app/_config/extensions.yml`
 
-	Page:
-	  extensions:
-	    - TypeformExtension
+    Page:
+      extensions:
+        - DNADesign\Typeform\Extensions\TypeformExtension
 
 Rebuild the database and complete the new Typeform tab in the CMS.
 
 To sync submissions call `dev/tasks/SyncTypeformSubmissions`. You can also sync
 individual forms (say on submission callback) by creating an action and manually
-invoking the `SyncTypeformSubmissions_Single` class
+invoking the `SyncTypeformSubmissionsSingle` class
 
-	$sync = new SyncTypeformSubmissions_Single($this->TypeformKey);
-	$results = $sync->syncComments($this);
+    $sync = new SyncTypeformSubmissionsSingle($this->TypeformKey);
+    $results = $sync->syncComments($this);
 
 ## Features
 
-	* Imports questions, forms and submissions into SilverStripe Data Models
-	* Attach Typeform pages to any SilverStripe Object
-	* CMS Admin interface for viewing and managing Typeform data
-
-	
-	
+    * Imports questions, forms and submissions into SilverStripe Data Models
+    * Attach Typeform pages to any SilverStripe Object
+    * CMS Admin interface for viewing and managing Typeform data
