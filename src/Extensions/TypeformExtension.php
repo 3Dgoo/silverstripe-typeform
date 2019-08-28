@@ -1,6 +1,6 @@
 <?php
 
-namespace DNADesign\Typeform\Extenaions;
+namespace DNADesign\Typeform\Extensions;
 
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextField;
